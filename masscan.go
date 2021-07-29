@@ -39,7 +39,7 @@ func newMasscan(cfg *config) *Masscan {
 }
 
 func (m *Masscan) Init() {
-	m.cfg.masscanpath = m.cfg.masscanpath + runtime.GOOS+"_masscan.exe"
+	m.cfg.masscanpath = "resource\software\\" + runtime.GOOS+"_masscan.exe"
 	m.ctx, m.cancel = context.WithCancel(context.Background())
 }
 
